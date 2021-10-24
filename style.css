@@ -21,6 +21,8 @@ body {
   width: 100%;
   min-height: 100vh;
   font-family: 'Montserrat', monospace;
+  background-color: var(--theBlack);
+  color: var(--theWhite);
 }
 
 /* -------- Elements ----------- */
@@ -187,7 +189,7 @@ nav .logo {
 #hero-container .hero-video-container {
   height: 100%;
   width: 50%;
-  background-image: url("./assets/hero-test.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("./assets/hero-test.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -253,8 +255,17 @@ nav .logo {
 /* ----------- End of Hero -------- */
 /* ------- Main --------- */
 main {
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+main section {
+  margin: 80px 0;
+  width: 90%;
 }
 
 @media only screen and (max-width: 880px) {
@@ -263,4 +274,81 @@ main {
   }
 }
 
+/* ----------- Services --------- */
+#services-container {
+  color: var(--theWhite);
+}
+
+#services-container .services-container-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#services-container .services-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+#services-container .services-content .service {
+  margin-top: 30px;
+  margin-left: 15px;
+  width: 30%;
+}
+
+#services-container .services-content .service i {
+  margin-bottom: 15px;
+}
+
+#services-container .services-content .service .service-title {
+  margin-bottom: 15px;
+}
+
+#services-container .services-content .service .service-description {
+  text-align: left;
+}
+
+/* Services tablet */
+@media only screen and (max-width: 880px) {
+  #services-container {
+    padding: 20px;
+  }
+
+  #services-container .services-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #services-container .services-content .service {
+    width: 100%;
+    max-width: 583px;
+  }
+}
+
+/* Services mobile */
+@media only screen and (max-width: 450px) {
+
+  #services-container .services-container-title {
+    text-align: left;
+  }
+}
+
+/* --------- End of services ------- */
+/* -------- How it works --------- */
+#how-it-works-container {
+  background-color: var(--theWhite);
+  color: var(--theBlack);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.howitworks-container {
+  width: 90%;
+}
+
+/* ---------End of how it works ------- */
 /* ------ End of main -------- */
